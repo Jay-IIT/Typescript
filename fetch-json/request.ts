@@ -8,18 +8,24 @@ interface Todo{
     title: string 
     completed: boolean
 }
+const  logdata = (Title:string,Data:string)=>{
+    console.log(`
+    Title : ${Title}
+    Data  : ${Data}
+  
+    `) 
 
+}
 
 axios.get(url).then(response => {
      const todo = response.data as Todo 
- 
+    logdata( 
+      todo.title ,
+       todo.title 
+      
+    )     
 
 
-    console.log(`
-    Title : ${todo.title}
-    Data  : ${todo.id}
-    userid  : ${todo.userId}
-    Finished : ${todo.completed}
-    `) 
+    
 
 }) 

@@ -2,4 +2,7 @@
 exports.__esModule = true;
 var axios_1 = require("axios");
 var url = "https://jsonplaceholder.typicode.com/todos/1";
-axios_1["default"].get(url).then(function (response) { console.log(response.data); });
+axios_1["default"].get(url).then(function (response) {
+    var todo = response.data;
+    console.log("\n    Title : ".concat(todo.title, "\n    Data  : ").concat(todo.id, "\n    userid  : ").concat(todo.userId, "\n    Finished : ").concat(todo.completed, "\n    "));
+});
